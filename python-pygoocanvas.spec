@@ -1,10 +1,11 @@
 #
 Summary:	Python bindings for GooCanvas
+Summary(pl.UTF-8):	Wiązania języka Python do biblioteki GooCanvas
 Name:		python-pygoocanvas
 Version:	0.9.0
 Release:	1
 License:	GPLv2
-Group:		Development/Libraries
+Group:		Libraries/Python
 Source0:	http://download.berlios.de/pygoocanvas/pygoocanvas-%{version}.tar.gz
 # Source0-md5:	1988b7572d553d954ffd159e7e61cb17
 Patch0:		%{name}-pyc.patch
@@ -15,18 +16,21 @@ BuildRequires:	python-pygobject-apidocs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Python bindings for GooCanvas
+Python bindings for GooCanvas.
+
+%description -l pl.UTF-8
+Wiązania języka Python do biblioteki GooCanvas.
 
 %package apidocs
 Summary:	pygoocanvas API documentation
-Summary(pl):	Dokumentacja API pygoocanvas
+Summary(pl.UTF-8):	Dokumentacja API pygoocanvas
 Group:		Documentation
 Requires:	gtk-doc-common
 
 %description apidocs
 pygoocanvas API documentation.
 
-%description apidocs -l pl
+%description apidocs -l pl.UTF-8
 Dokumentacja API pygoocanvas.
 
 %prep
