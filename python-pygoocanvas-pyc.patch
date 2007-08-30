@@ -1,0 +1,14 @@
+diff -ur pygoocanvas-0.9.0-o/configure.ac pygoocanvas-0.9.0/configure.ac
+--- pygoocanvas-0.9.0-o/configure.ac	2007-08-18 15:04:21.000000000 -0600
++++ pygoocanvas-0.9.0/configure.ac	2007-08-29 22:52:14.000000000 -0600
+@@ -118,8 +118,8 @@
+ dnl codegen
+ AC_MSG_CHECKING(for pygtk codegen)
+ CODEGENDIR=`pkg-config --variable=codegendir pygtk-2.0`
+-if test -f $CODEGENDIR/codegen.py; then
+-	CODEGEN=$CODEGENDIR/codegen.py
++if test -f $CODEGENDIR/codegen.pyc; then
++	CODEGEN=$CODEGENDIR/codegen.pyc
+ 	AC_MSG_RESULT(yes)
+ else 
+ 	AC_MSG_RESULT(no)
