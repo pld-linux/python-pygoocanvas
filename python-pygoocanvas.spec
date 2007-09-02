@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	libxslt-progs
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	python-pycairo-devel >= 1.2.0
+BuildRequires:	python-pygobject-apidocs
 BuildRequires:	python-pygobject-devel >= 2.11.3
 BuildRequires:	python-pygtk-devel >= 2:2.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,7 +58,10 @@ Dokumentacja API pygoocanvas.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	HTMLdir=%{_gtkdocdir}/pygoocanvas
+
+rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
