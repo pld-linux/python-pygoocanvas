@@ -20,6 +20,7 @@ BuildRequires:	python-pycairo-devel >= 1.2.0
 BuildRequires:	python-pygobject-apidocs
 BuildRequires:	python-pygobject-devel >= 2.11.3
 BuildRequires:	python-pygtk-devel >= 2:2.10.0
+BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
