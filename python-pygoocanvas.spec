@@ -8,7 +8,7 @@ Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/pygoocanvas/0.13/pygoocanvas-%{version}.tar.bz2
 # Source0-md5:	e70089ab34f4d8e6fb6aec9e73e01bef
 Patch0:		%{name}-pyc.patch
-URL:		http://developer.berlios.de/projects/pygoocanvas/
+URL:		http://live.gnome.org/PyGoocanvas
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	goocanvas-devel >= 0.13
