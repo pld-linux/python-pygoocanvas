@@ -1,22 +1,23 @@
-Summary:	Python bindings for GooCanvas
+Summary:	Python bindings for GooCanvas library
 Summary(pl.UTF-8):	Wiązania języka Python do biblioteki GooCanvas
 Name:		python-pygoocanvas
-Version:	0.9.0
-Release:	2
+Version:	0.13.1
+Release:	1
 License:	LGPL v2
 Group:		Libraries/Python
-Source0:	http://download.berlios.de/pygoocanvas/pygoocanvas-%{version}.tar.gz
-# Source0-md5:	1988b7572d553d954ffd159e7e61cb17
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/pygoocanvas/0.13/pygoocanvas-%{version}.tar.bz2
+# Source0-md5:	e70089ab34f4d8e6fb6aec9e73e01bef
 Patch0:		%{name}-pyc.patch
 URL:		http://developer.berlios.de/projects/pygoocanvas/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	goocanvas-devel >= 0.9
+BuildRequires:	goocanvas-devel >= 0.13
 BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	libtool
 BuildRequires:	libxslt-progs
+BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 2.2
-BuildRequires:	python-pycairo-devel >= 1.2.0
+BuildRequires:	python-pycairo-devel >= 1.4.0
 BuildRequires:	python-pygobject-apidocs
 BuildRequires:	python-pygobject-devel >= 2.11.3
 BuildRequires:	python-pygtk-devel >= 2:2.10.0
@@ -24,7 +25,7 @@ BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Python bindings for GooCanvas.
+Python bindings for GooCanvas library.
 
 %description -l pl.UTF-8
 Wiązania języka Python do biblioteki GooCanvas.
@@ -71,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{py_sitedir}/goocanvasmodule.so
+%{_pkgconfigdir}/pygoocanvas.pc
 
 %files apidocs
 %defattr(644,root,root,755)
