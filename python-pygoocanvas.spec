@@ -2,7 +2,7 @@ Summary:	Python bindings for GooCanvas library
 Summary(pl.UTF-8):	Wiązania języka Python do biblioteki GooCanvas
 Name:		python-pygoocanvas
 Version:	0.14.1
-Release:	2
+Release:	3
 License:	LGPL v2
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/pygoocanvas/0.14/pygoocanvas-%{version}.tar.bz2
