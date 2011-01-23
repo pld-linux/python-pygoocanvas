@@ -11,6 +11,7 @@ Patch0:		%{name}-pyc.patch
 URL:		http://live.gnome.org/PyGoocanvas
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1:1.7
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	goocanvas-devel >= 0.14
 BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	libtool
