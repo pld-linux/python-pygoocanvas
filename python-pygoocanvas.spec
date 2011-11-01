@@ -18,11 +18,15 @@ BuildRequires:	libtool
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 2.2
-BuildRequires:	python-pycairo-devel >= 1.4.0
-BuildRequires:	python-pygobject-apidocs
+BuildRequires:	python-pycairo-devel >= 1.8.0
+BuildRequires:	python-pygobject-apidocs >= 2.11.3
 BuildRequires:	python-pygobject-devel >= 2.11.3
 BuildRequires:	python-pygtk-devel >= 2:2.10.0
 BuildRequires:	rpm-pythonprov
+Requires:	goocanvas >= 0.14
+Requires:	python-pycairo >= 1.8.0
+Requires:	python-pygobject >= 2.11.3
+Requires:	python-pygtk-gtk >= 2:2.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	HTMLdir=%{_gtkdocdir}/pygoocanvas
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.la
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
